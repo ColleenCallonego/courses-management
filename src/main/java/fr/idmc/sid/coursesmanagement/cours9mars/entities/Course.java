@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -15,11 +16,21 @@ import java.util.UUID;
 @ToString
 public class Course {
     @Id
-    private UUID id;
+    private String id;
     private String wording;
     @ManyToOne
     private Professor professor;
     @OneToMany
-    private ArrayList<Student> students;
+    private List<Student> students;
 
+    public Course(String wording, Professor professor){
+        this.id = UUID.randomUUID().toString();
+        this.wording = wording;
+        this.professor = professor;
+        this.students = new ArrayList<Student>();
+    }
+
+    public Course() {
+
+    }
 }

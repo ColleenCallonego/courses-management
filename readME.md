@@ -9,3 +9,6 @@ Diagrammes :
 ![img_1.png](img_1.png)
 
 ![img_2.png](img_2.png)
+
+Pour tester mon API :
+http://localhost:8082/professor/1/suites 

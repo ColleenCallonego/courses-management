@@ -1,5 +1,6 @@
 package fr.idmc.sid.coursesmanagement.cours9mars.entities;
 
+import fr.idmc.sid.coursesmanagement.cours9mars.boudaries.courses.CourseResource;
 import lombok.Data;
 import lombok.ToString;
 
@@ -14,12 +15,20 @@ import java.util.UUID;
 @ToString
 public class Professor {
     @Id
-    private UUID id;
+    private String id;
     private String firstname;
     private String lastname;
     private String subject;
 
-    public Course chooseCourse(String wording){
-        return null;
+    public Professor (String id, String firstname, String lastname, String subject){
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.subject = subject;
     }
+
+    public Professor() {
+
+    }
+
 }
